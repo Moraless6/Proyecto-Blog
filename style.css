@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+/*Index.html*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+.main{
+    background: linear-gradient(#000000 , #303030);
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    color: #111;
+    background-color: #C2C0C0;
+    border-radius: 20px;
+}
+
+/*El header es el mismo para los 3 archivos, no tocar*/
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 25px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0,5s;
+    background-color: #000000f5
+}
+
+header .logo{
+    color: #C2C0C0;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header .logo span{
+    color: rgba(206, 11, 11, 0.815)
+}
+
+header .navigation{
+    position: relative;
+    display: flex;   
+}
+
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a{
+    text-decoration: none;
+    color: #111;
+    font-weight: 300;
+    background-color:#C2C0C0;
+    border-radius: 20px;
+    padding: 20px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+header .navigation li a:hover{
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(206, 11, 11, 0.815);
+    letter-spacing: 2px;
+    background-color: #b4b3b3;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.banner .content{
+    max-width: 900px;
+    text-align: center;
+}
+
+.banner .content h2{
+    font-size: 5em;
+    color: #C2C0C0;
+    padding: auto;
+}
+
+
+.banner .content p{
+    font-size: 1em;
+    color: #111;
+}
+
+.btn{
+    font-size: 1em;
+    color: #C2C0C0;
+    background: rgb(230, 32, 32);
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+.btn:hover{
+    letter-spacing: 6px;
+}
+
+/*Corregir esto en index*/
+
+article{
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Curriculum.html*/
+/* Apartir de aqui, se trabaja con curriculum.html, la clase corpse fue creada
+para evitar problemas con body y main en el formato de curriculum.html*/
+
+.corpse{
+    background-color:#b4b3b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color:#b4b3b3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,1);
+    margin: 50px
+}
+
+/*Apartir de aqui se manipula el lado izquierdo del container
+Aca va la foto y los datos de contacto*/
+
+.container .left{
+    position: relative;
+    background-color:#000000;
+    padding: 40px;
+    bottom: 5px;
+
+}
+
+.profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0);
+}
+
+.profile .img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .img img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile h2{
+    color: #b4b3b3;
+    font-size: 1,5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.4em;
+}
+
+.profile h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactinfo{
+    padding-top: 40px;
+
+}
+
+.tittle{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactinfo ul{
+    position: relative;
+}
+
+.contactinfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactinfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #b4b3b3;
+}
+
+.contactinfo ul li span{
+    color: #b4b3b3;
+    font-weight: 300;
+}
+
+/*Apartir de aqui se manipula el lado derecho del container
+Aca va el texto de relleno del lado derecho*/
+
+.container .right{
+    position: relative;
+    background-color:#303030;
+    padding: 40px;
+    bottom: 5px;
+}
+
+.container .right .tittle{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.container .right .text{
+    color: #b4b3b3;
+    font-size: 17px;
+}
+
+/*Blog.html*/
+/*Apartir de aqui se empieza a trabajar el blog
+Nota: corregir index.html*/
+
+.blogmain{
+    position: relative;
+    padding: 100px;
+    width: 100%;
+    min-height: 100vh;
+    background-color:#b4b3b3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+.fallimg{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
+
+.blogmain .blogcontent{
+    position: relative;
+    z-index: 1;
+    background-color: #b4b3b3cb;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.blogmain .blogcontent h2{
+    font-size: 3em;
+    font-weight: 2000%;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.blogmain .blogcontent h3{
+    font-weight: 2000%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    bottom: 10px;
+}
+
+.blogmain .blogcontent .btnul{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.blogmain .blogcontent .btnul li{
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.blogmain .blogcontent .btnblog{
+    font-size: 1em;
+    color: #C2C0C0;
+    background: rgb(230, 32, 32);
+    padding: 10px 15px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.blogmain .blogcontent .btnblog:hover{
+    letter-spacing: 4px;
+}
+
+
+.divider{
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.backdiv{
+    max-width: 900px;
+    text-align: center;
+    background-color: #30303075;
+    border-radius: 50px;
+    padding: 15px;
+}
+
+.backdiv h1{
+    font-size: 5em;
+    color:#fff;
+    padding: auto;
+}
+
+.backdiv h1 span{
+    color: rgba(206, 11, 11, 0.815)
+}
+
+.bloggmain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#111
+}
+
+.blogroot{
+    position: relative;
+    width: 1100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.blogroot .blogrootcard{
+    position: relative;
+    max-width: 300px;
+    height: 200px;
+    background:#C2C0C0;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.blogroot .blogrootcard:hover{
+    height: 365px;
+}
+
+.blogroot .blogrootcard .blogimg{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -115px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.blogroot .blogrootcard .blogimg img{
+    max-width: 100%;
+    border-radius: 25px;
+}
+
+.blogroot .blogrootcard .blogtext{
+    position: relative;
+    top: 25px;
+    padding: 10px 15px;
+    text-align: center;
+    color:#303030;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.blogroot .blogrootcard:hover .blogtext{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3;
+    color: #000000;
+}
